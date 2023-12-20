@@ -7,6 +7,13 @@ const loc = useRoute();
 const router = useRouter()
 let currentRouter = ref(null)
 
+const asd = [1,2,3,]
+const asd3 = [1,2,3,]
+const asd2 = [3,4,5,]
+
+console.log(asd === asd3)
+console.log(asd.concat(asd2)[1] * 2 + asd2.length)
+
 watch(
     loc,
     () => {
