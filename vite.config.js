@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js'
       }
     },
     css: {
