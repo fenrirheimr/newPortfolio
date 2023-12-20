@@ -1,18 +1,33 @@
 <script setup>
 import {RouterView, useRoute, useRouter} from 'vue-router'
-import {ref, watch} from "vue";
+import {onMounted, ref, watch} from "vue";
 import NavBar from "@/components/NavBar.vue";
+
+import prisma from "@/lib/prisma";
+
+onMounted(() => {
+  const getStaticProps = async () => {
+    const feed = await prisma.post.findMany({
+      where: { published: true },
+      include: {
+        author: {
+          select: { name: true }
+        }
+      }
+    })
+    return {
+      props: { feed },
+      revalidate: 10
+    }
+  }
+
+  console.log('>>>', getStaticProps())
+});
 
 const loc = useRoute();
 const router = useRouter()
 let currentRouter = ref(null)
 
-const asd = [1,2,3,]
-const asd3 = [1,2,3,]
-const asd2 = [3,4,5,]
-
-console.log(asd === asd3)
-console.log(asd.concat(asd2)[1] * 2 + asd2.length)
 
 watch(
     loc,
