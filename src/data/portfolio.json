@@ -3,12 +3,12 @@
     "year": 2023,
     "name": "TimeX.App",
     "projectImages": [
-      "/src/projects/timexapp/01.webp",
-      "/src/projects/timexapp/02.webp",
-      "/src/projects/timexapp/03.webp",
-      "/src/projects/timexapp/04.webp",
-      "/src/projects/timexapp/05.webp",
-      "/src/projects/timexapp/06.webp"
+      "/public/projects/timexapp/01.webp",
+      "/public/projects/timexapp/02.webp",
+      "/public/projects/timexapp/03.webp",
+      "/public/projects/timexapp/04.webp",
+      "/public/projects/timexapp/05.webp",
+      "/public/projects/timexapp/06.webp"
     ],
     "description": "Мобильное приложение для криптобиржы Timex.io",
     "descriptionFull": "Мною выполнена верстка \"скелета\" приложения и основных компонентов, навигация, KYC, некоторые платежные инструменты (привязка аккаунтов), истории операций, балансов и активности на аккаунте.",
@@ -40,9 +40,9 @@
     "year": 2021,
     "name": "Timex.io",
     "projectImages": [
-      "/src/projects/timex.io/01.webp",
-      "/src/projects/timex.io/02.webp",
-      "/src/projects/timex.io/03.webp"
+      "/public/projects/timex.io/01.webp",
+      "/public/projects/timex.io/02.webp",
+      "/public/projects/timex.io/03.webp"
     ],
     "description": "Криптобиржа TimeX",
     "descriptionExt": "Австралийская криптобиржа. Можно торговать биткойнами (BTC), Ethereum (ETH), Litecoin (LTC) и другими популярными криптовалютами.",
