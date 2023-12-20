@@ -3,7 +3,6 @@ import { loadEnv, defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import webfontDownload from 'vite-plugin-webfont-dl';
-import vercel from 'vite-plugin-vercel';
 
 export default defineConfig(({ mode }) => {
   // This check is important!
@@ -15,7 +14,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       vue(),
-      vercel(),
       webfontDownload([
         'https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700&display=swap'
       ])
