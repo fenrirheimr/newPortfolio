@@ -4,13 +4,13 @@ defineProps({
   age: Number
 })
 
-import skillStore from "@/stores/skills.js";
-
-const store = skillStore();
-
-store.fetchSkills()
-
-console.log('???', store.getSkills.items)
+// import skillStore from "@/stores/portfolio.js";
+//
+// const store = skillStore();
+//
+// store.fetchSkills()
+//
+// console.log('???', store.getSkills.items)
 
 </script>
 

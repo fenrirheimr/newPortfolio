@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import debounce from "lodash/debounce";
 import { modalStore } from '@/stores/modalStore.js'
 import Close from '@/components/icons/Close.vue'
+import Link from '@/components/icons/Link.vue'
 import Tag from "@/components/Tag.vue";
 
 defineProps({
@@ -22,6 +23,19 @@ const closeModal = () => {
   modal.value.classList.add('removing');
   removed()
 }
+//
+function getFileTypeFromURL(url) {
+  const extension = url && url.split(/[#?]/)[0].split('.').pop().trim();
+  if(extension === 'mp4'){
+    return `
+    <video autobuffer="autobuffer" width="100%" autoplay="autoplay" loop="loop" playsinline="" muted="" preload="auto">
+        <source src="${url}" type="video/mp4">
+      </video>
+    `;
+  } else {
+    return `<img alt="" src="${url}" style="max-width: 100%;" />`;
+  }
+}
 
 </script>
 
@@ -36,35 +50,43 @@ const closeModal = () => {
 
           <div class="modal-content project">
             <div class="project-header">
-              <h1>{{ content.name }}</h1>
+              <h1>{{ content.title }}</h1>
               <div class="project-tags">
                 <Tag v-for="tag in content.stack" :title="tag" :icon="{}" />
               </div>
             </div>
             <div class="project-description">
-              {{ content.description }}
+              {{ content.descriptionShort }}
             </div>
-            <div class="project-description" v-if="content.descriptionExt">
-              {{ content.descriptionExt }}
+            <div class="project-description" v-if="content.descriptionExtended">
+              {{ content.descriptionExtended }}
             </div>
-            <div class="project-images" v-if="content.projectImages">
+            <div class="project-images" v-if="content.projectImages.length">
               <div class="img-wrapper" v-for="(src, i) in content.projectImages" :key="i">
                 <img :src="src" />
               </div>
             </div>
+            <div class="project-images" v-else>
+              <div class="img-wrapper no-image" v-for="(n, i) in 3" :key="i">
+                no images
+              </div>
+            </div>
             <div class="project-description">
-              {{ content.descriptionFull }}
+              {{ content.myResponsibility }}
             </div>
 
-            <div class="project-extensions" v-if="content.extensions">
-              <a v-for="extension in content.extensions" :href="extension.link" target="_blank">{{ extension.text }}</a>
-            </div>
-            <div class="project-ext-link" v-if="content.exLink">
-              <a :href="content.exLink.link">{{content.exLink.text}}</a>
+            <div class="project-extensions" v-if="content.projectLinks">
+              <span class="label">Проект:</span>
+              <a v-for="link in content.projectLinks" :href="link.url" target="_blank">{{ link.title }} <Link class="icon" /></a>
             </div>
 
-            <div class="item-customer">
-              <a :href="content.customer?.link">{{ content.customer?.name }}</a>
+            <div class="project-customer">
+              <span class="label">Для компании:</span>
+              <a v-if="content.projectCustomer.url" :href="content.projectCustomer.url" target="_blank">
+                {{ content.projectCustomer.title }}
+                <Link class="icon" />
+              </a>
+              <span v-else>{{ content.projectCustomer.title }}</span>
             </div>
           </div>
 
@@ -107,6 +129,9 @@ const closeModal = () => {
       height: calc(100% - 40px);
       background: #F8F8F2;
       padding: 30px;
+      .label {
+        @include font-style($font-size: calc(9vw * 10 / 100));
+      }
       .project {
         &-header {
           @include flex(row, space-between, flex-start);
@@ -123,17 +148,25 @@ const closeModal = () => {
           margin-bottom: 1vw;
         }
         &-images {
-          @include flex(row, flex-start, flex-start);
+          @include flex(row, flex-start, stretch);
           width: 100%;
           gap: 1vw;
           margin-bottom: 2.5vh;
           max-height: 40vh;
           overflow: hidden;
           .img-wrapper {
-            //height: 100%;
+            border-radius: 5px;
             img {
               max-width: 100%;
-              //height: 100%;
+              height: auto;
+              min-height: 100%;
+            }
+            &.no-image {
+              @include font-style($font-size: calc(10vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
+              @include flex(row, center, center);
+              background: rgba(204, 204, 204, 0.6);
+              width: 100%;
+              height: 20vh;
             }
           }
         }
@@ -141,10 +174,28 @@ const closeModal = () => {
           @include font-style($font-size: calc(11vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
           margin-bottom: 1.2vw;
         }
-        &-extensions {
+        &-extensions,
+        &-ext-link {
+          @include flex(row, flex-start, center);
           @include font-style($font-size: calc(11vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
+          gap: 1vw;
           margin-bottom: 1.2vw;
-          @include flex(row, flex-start, flex-start);
+        }
+        &-customer {
+          @include flex(row, flex-start, center);
+          @include font-style($font-size: calc(11vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
+          gap: 1vw;
+        }
+        &-extensions,
+        &-customer {
+          a {
+            @include flex(row, flex-start, center);
+            gap: .2vw;
+            .icon {
+              width: 18px;
+              height: 18px;
+            }
+          }
         }
       }
       .name-wrapper {

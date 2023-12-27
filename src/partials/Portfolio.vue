@@ -1,9 +1,12 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import debounce from 'lodash/debounce'
 import { modalStore } from '@/stores/modalStore.js'
-import  portfolio from '@/data/portfolio.json'
+import  portfolioLocal from '@/data/portfolio.json'
 
+import { portfolioStore } from "@/stores/portfolio"
+
+const store = portfolioStore();
 
 import PortfolioModal from "@/components/PortfolioModal.vue";
 import Tag from "@/components/Tag.vue";
@@ -12,14 +15,80 @@ defineProps({
   title: String,
 })
 
+// await store.fetchPortfolio()
+// const portfolio = store.getPortfolio
+
 let showModal = ref(false);
 const container = ref(null);
 
 const isLoaded = debounce(() => {
   container.value.classList.add('loaded');
-}, 1200)
+}, 0)
 
-let temp =  Object.values(portfolio.reduce((r, cur) => {
+// порядок полей в JSON
+const k = JSON.parse(JSON.stringify( portfolioLocal, [
+    "year","title","descriptionShort", "descriptionExtended", "myResponsibility", "projectImages", "projectLinks", "projectCustomer", "isRedone", "stack"
+] , 2));
+
+
+// const arr = [{ name: "John" }, { name: "Koul" }];
+
+const addNew = (arr) => {
+  return [...arr].map(el => {
+    if(typeof el.descriptionShort === 'undefined') {
+      el.descriptionShort = ""
+    }
+    if(typeof el.descriptionExtended === 'undefined') {
+      el.descriptionExtended = ""
+    }
+    if(typeof el.myResponsibility === 'undefined') {
+      el.myResponsibility = ""
+    }
+    if(typeof el.projectImages === 'undefined') {
+      el.projectImages = []
+    }
+    if(typeof el.projectLinks === 'undefined') {
+      el.projectLinks = null
+    }
+    if(typeof el.stack === 'undefined') {
+      el.stack = [
+        "css",
+        "html",
+        "jQuery",
+      ]
+    }
+    return el;
+  });
+};
+
+addNew(k)
+console.log(k);
+
+//
+// for (let item of k) {
+//   // console.log('!!!', item)
+//   if(typeof item.descriptionShort === 'undefined') {
+//     item.descriptionShort = "1"
+//     // console.log('!!!', item)
+//   }
+// }
+// const withInteractAttributes = array => array.map(item => ({
+//   ...item,
+//   dragIgnoreFrom: '.drag-ignore-from'
+// }))
+// let d = k.map(item => {
+//   if(typeof item.descriptionShort === 'undefined') {
+//     item.descriptionShort = "1"
+//     console.log('!!!', item)
+//   }
+//   else {
+//     console.log('Поле "age" в наличии, значение: ', item.descriptionShort);
+//   }
+// })
+
+// console.log('>>>', d);
+
+let temp =  Object.values(k.reduce((r, cur) => {
   const key = 'k' + cur['year']; // символ "k" добавлен, чтобы автоматически не сортировало по цифровым ключам
   (r[key] = r[key] || []).push(cur);
   return r;
@@ -57,11 +126,11 @@ onMounted(() => {
         </header>
         <div class="item" v-for="(content, i) in item.items" :key="i">
           <div class="item-content">
-            <div class="item-title">{{ content.name }}</div>
+            <div class="item-title">{{ content.title }}</div>
             <div class="item-tags">
               <Tag v-for="tag in content.stack" :title="tag" :icon="{}" />
             </div>
-            <div class="item-description">{{ content.description }}</div>
+            <div class="item-description">{{ content.descriptionShort }}</div>
             <div class="item-btn" @click="handleDetail(content)">Описание проекта</div>
           </div>
         </div>
@@ -71,10 +140,6 @@ onMounted(() => {
   </div>
   <PortfolioModal :show="showModal" @close="showModal = false" />
 
-<!--  <div @click="showModal = !showModal" ref="showModalBtn" class="btn-6" @mouseenter="mouseMove" @mouseleave="mouseMove">-->
-<!--    Смотреть-->
-<!--    <span></span>-->
-<!--  </div>-->
 </template>
 
 <style scoped lang="scss">
@@ -93,7 +158,7 @@ onMounted(() => {
       @include flex(column, flex-start, flex-start);
       width: 90vw;
       .year-title {
-        @include font-style($font-size: calc(20vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
+        @include font-style($font-size: calc(20vw * 10 / 100), $font-weight: 500, $line-height: 120%);
         @include flex(row, center, center);
         width: 100%;
         position: sticky;
@@ -125,12 +190,13 @@ onMounted(() => {
           }
         }
         &-content {
+          @include font-style($font-size: calc(10vw * 10 / 100), $font-weight: 400, $line-height: 120%);
           padding: 30px 30px;
           background-color: #fff;
           box-shadow: 0 50px 30px rgba(0, 0, 0, 0.3);
         }
         &-title {
-          @include font-style($font-size: calc(20vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
+          @include font-style($font-size: calc(20vw * 10 / 100), $font-weight: 500);
           margin-bottom: 1.5vh;
         }
         &-tags {
@@ -139,15 +205,12 @@ onMounted(() => {
           margin-bottom: 1vw;
         }
         &-description {
-          @include font-style($font-size: calc(11vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
-          margin-bottom: 1.5vh;
+          margin-bottom: 3.5vh;
         }
         &-customer {
-          @include font-style($font-size: calc(10vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
           margin-bottom: 1vw;
         }
         &-btn {
-          @include font-style($font-size: calc(10vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: #352E2E);
           display: inline-flex;
           padding: 10px 15px;
           width: auto;
@@ -162,7 +225,7 @@ onMounted(() => {
       &:first-of-type,
       &:last-of-type {
         .year-title {
-          @include font-style($font-size: calc(50vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
+          @include font-style($font-size: calc(50vw * 10 / 100), $font-weight: 500, $line-height: 120%);
           text-shadow:
               0 1px 0 #ccc,
               0 2px 0 #ccc,
@@ -182,67 +245,6 @@ onMounted(() => {
         }
       }
     }
-  }
-}
-
-.btn-6 {
-  $btn-color: #352E2E;
-  $btn-color-dark: shade($btn-color, 40%);
-  @include font-style($font-size: 2vw, $font-weight: 500, $line-height: 120%, $color: $btn-color);
-
-  text-decoration: none;
-  line-height: $btn-height;
-  transition: 0.5s ease-in-out;
-  overflow: hidden;
-  width: 100%;
-  max-width: 20vw;
-  position: relative;
-  text-align: center;
-  border: 1px solid currentColor;
-  opacity: 0;
-  &.loaded {
-    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
-
-  & > * {
-    transition: 0.5s ease-in-out;
-  }
-
-  span {
-    @include absolute();
-    display: block;
-    @include size(0);
-    border-radius: 50%;
-    background-color: $btn-color-dark;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-
-  &:hover {
-    color: tint($btn-color, 55%);
-    cursor: pointer;
-    span {
-      @include size(225%, $btn-width*2.25);
-    }
-  }
-
-  &:active {
-    background-color: $btn-color;
-  }
-}
-
-@keyframes text-pop-up-top {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-    //transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(50px);
-    //transform-origin: 50% 50%;
   }
 }
 

@@ -3,27 +3,6 @@ import {RouterView, useRoute, useRouter} from 'vue-router'
 import {onMounted, ref, watch} from "vue";
 import NavBar from "@/components/NavBar.vue";
 
-import prisma from "@/lib/prisma";
-
-onMounted(() => {
-  const getStaticProps = async () => {
-    const feed = await prisma.post.findMany({
-      where: { published: true },
-      include: {
-        author: {
-          select: { name: true }
-        }
-      }
-    })
-    return {
-      props: { feed },
-      revalidate: 10
-    }
-  }
-
-  console.log('>>>', getStaticProps())
-});
-
 const loc = useRoute();
 const router = useRouter()
 let currentRouter = ref(null)
@@ -36,6 +15,35 @@ watch(
     },
     {deep: true, immediate: true,}
 )
+
+
+// import { MongoClient, ServerApiVersion } from 'mongodb'
+// const uri = "mongodb+srv://vercel-admin-user:5xvhGrwfmCJICOPV@cluster0.1tid6lr.mongodb.net/?retryWrites=true&w=majority";
+//
+// // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+//
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
+
+
 </script>
 
 <template>

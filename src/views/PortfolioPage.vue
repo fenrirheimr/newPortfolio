@@ -11,7 +11,14 @@ const route = useRoute()
 
 <template>
   <section>
-    <Portfolio />
+    <Suspense>
+      <Portfolio />
+      <template #fallback>
+        <div class="loading">
+          Loading...
+        </div>
+      </template>
+    </Suspense>
     <Teleport to="body">
       <Loader :spinner="route.meta.spinner" :duration="route.meta.duration" />
     </Teleport>
@@ -21,5 +28,8 @@ const route = useRoute()
 section {
   @include flex(column, center, center);
   height: 100%;
+  .loading {
+    min-height: 100vh;
+  }
 }
 </style>

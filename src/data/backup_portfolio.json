@@ -1,0 +1,1028 @@
+[
+  {
+    "year": 2023,
+    "name": "TimeX.App",
+    "projectImages": [
+      "/projects/timexapp/01.webp",
+      "/projects/timexapp/02.webp",
+      "/projects/timexapp/03.webp",
+      "/projects/timexapp/04.webp",
+      "/projects/timexapp/05.webp",
+      "/projects/timexapp/06.webp"
+    ],
+    "description": "Мобильное приложение для криптобиржы Timex.io",
+    "descriptionExt": "",
+    "descriptionFull": "Мною выполнена верстка \"скелета\" приложения и основных компонентов, навигация, KYC, некоторые платежные инструменты (привязка аккаунтов), истории операций, балансов и активности на аккаунте.",
+    "customer": {
+      "name": "Chrono.tech",
+      "link": "https://chrono.tech/"
+    },
+    "isExist": true,
+    "exLink": null,
+    "showModal": false,
+    "extensions": [
+      {
+        "text": "App Store",
+        "link": "https://apps.apple.com/au/app/timex/id6443878656"
+      },
+      {
+        "text": "Google Play",
+        "link": "https://play.google.com/store/apps/details?id=io.timexapp"
+      }
+    ],
+    "stack": [
+      "java script",
+      "react native",
+      "redux",
+      "scss"
+    ]
+  },
+  {
+    "year": 2021,
+    "name": "Timex.io",
+    "projectImages": [
+      "/projects/timex.io/01.webp",
+      "/projects/timex.io/02.webp",
+      "/projects/timex.io/03.webp"
+    ],
+    "description": "Криптобиржа TimeX",
+    "descriptionExt": "Австралийская криптобиржа. Можно торговать биткойнами (BTC), Ethereum (ETH), Litecoin (LTC) и другими популярными криптовалютами.",
+    "descriptionFull": "Мною разработана главная страница и вся статика на SSR, а внутири приложения: KYC, некоторые настройки аккаунта (Trading setup, Notification, Fees, Affiliate program), истории операций, балансов и активности на аккаунте.",
+    "customer": {
+      "name": "Chrono.tech",
+      "link": "https://chrono.tech/"
+    },
+    "isExist": true,
+    "exLink": {
+      "link": "https://timex.io/",
+      "text": "timex.io"
+    },
+    "showModal": false,
+    "extensions": [],
+    "stack": [
+      "vue.js",
+      "vuex",
+      "SSR",
+      "vuetify",
+      "scss",
+      "muse-ui"
+    ]
+  },
+  {
+    "year": 2020,
+    "name": "AUDT.to",
+    "projectImages": ["img/portfolio/activist.jpg"],
+    "description": "Система управления криптобиржей Timex.io",
+    "descriptionExt": "Написана на vue.js + vuetify",
+    "descriptionFull": "",
+    "customer": {
+      "name": "Chrono.tech",
+      "link": "https://chrono.tech/"
+    },
+    "isExist": true,
+    "exLink": {
+      "link": "https://audt.to/",
+      "text": "audt.to"
+    },
+    "showModal": false,
+    "extensions": [],
+    "stack": [
+      "vue.js",
+      "vuetify",
+      "html",
+      "scss"
+    ]
+  },
+  {
+    "year": 2019,
+    "name": "CRM для управления предвыборной кампанией Активист",
+    "projectImages": ["img/portfolio/activist.jpg"],
+    "description": "Проект призван упростить управление предвыборной кампанией предоставив пользователю обширный набор инструментов для контроля и отчетности.",
+    "descriptionExt": "",
+    "descriptionFull": "",
+    "customer": {
+      "name": "P&B Stratwork",
+      "link": null
+    },
+    "isExist": false,
+    "exLink": null,
+    "showModal": false,
+    "extensions": [],
+    "stack": []
+  },
+  {
+    "year": 2017,
+    "name": "Продажа электронных билетов ХК Трактор",
+    "projectImages": [],
+    "description": "Система продажи электронных билетов с выбором по секторам.",
+    "descriptionExt": "",
+    "descriptionFull": "",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": {
+      "link": "https://booking.hctraktor.org/",
+      "text": "booking.hctraktor.org"
+    },
+    "showModal": false,
+    "extensions": [],
+    "stack": []
+  },
+  {
+    "year": 2017,
+    "name": "Сайт группы компаний Корвет",
+    "projectImages": ["img/portfolio/korvet.jpg"],
+    "description": "Группа компаний «Корвет» производит и поставляет современное насосное оборудование, незаменимое для нефтебаз, наливных эстакад, при бункеровке судов, в системах промстоков и промотходов, при аварийных ситуациях для перекачки вязких жидкостей, а также при проливах нефти и нефтепродуктов.",
+    "descriptionExt": "",
+    "descriptionFull": "",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": {
+      "link": "https://www.oilpump.ru/",
+      "text": "www.oilpump.ru"
+    },
+    "showModal": false,
+    "extensions": [],
+    "stack": []
+  },
+  {
+    "year": 2017,
+    "img": "img/portfolio/dijeans.jpg",
+    "name": "Интернет-магазин Диджинс",
+    "descriptionImg": "img/portfolio/screens/dijeans-s.png",
+    "description": "Одна из крупнейших сетей магазинов одежды в России",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://dijeans.ru/"
+  },
+  {
+    "year": 2017,
+    "img": "img/portfolio/symphony.jpg",
+    "name": "Промо-сайт освежителей воздуха Symphony",
+    "descriptionImg": "img/portfolio/screens/symphony-s.png",
+    "description": "Компания Арнест лидер российского рынка парфюмерно-косметической продукции и товаров бытовой химии. Symphony  серия средств для создания атмосферы свежести и уюта в доме.",
+    "customer": {
+      "name": "Radar Advertising",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://my-symphony.ru/"
+  },
+  {
+    "year": 2017,
+    "img": "img/portfolio/newton.jpg",
+    "name": "Сайт жилого комплекса Ньютон",
+    "descriptionImg": "img/portfolio/screens/newton-s.png",
+    "description": "Жилой Комплекс Ньютон находится на северо-западе города Челябинска в 20 и 30-м микрорайонах, в шаговой доступности от ледовой арены «Трактор».",
+    "customer": {
+      "name": "Radar Advertising",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://ньютон74.рф/"
+  },
+  {
+    "year": 2017,
+    "name": "Шинный центр «Шининвест»",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://shininvest.ru/"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/topkran.jpg",
+    "name": "Сайт компании ТОПКРАН",
+    "descriptionImg": "img/portfolio/screens/topkran-s.png",
+    "description": "ТОПКРАН  предприятие, работающее на строительном рынке Уральского Федерального Округа. Cпециализируется на aренде, продаже, монтаже и обслуживании башенных кранов. Компания располагает собственным парком башенных кранов и квалифицированным штатом специалистов.",
+    "customer": {
+      "name": "ООО ТопКран",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://topcran.ru/"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/umney.jpg",
+    "name": "Личный кабинет абитуриента на Умней.ру",
+    "descriptionImg": "img/portfolio/screens/umney-s.png",
+    "description": "Умней.ру - портал дистанционного образования",
+    "customer": {
+      "name": "ИнТиго",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://umney.ru/"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/k-flex.jpg",
+    "name": "Личный кабинет дилера K-FLEX",
+    "descriptionImg": "img/portfolio/screens/k-flex-s.png",
+    "description": "К-ФЛЕКС  производитель технической теплоизоляции из вспененного каучука",
+    "customer": {
+      "name": "ИнТиго",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://k-flex.ru/"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/60mIS.jpg",
+    "name": "60 минут IS",
+    "descriptionImg": "img/portfolio/screens/60mIS-s.png",
+    "description": "Система поиска и бронирования номеров",
+    "customer": {
+      "name": "Форин",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "portfolio/60mIS/index.html"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/60m.jpg",
+    "name": "60 минут",
+    "descriptionImg": "img/portfolio/60m.jpg",
+    "description": "Система управления отелем",
+    "customer": {
+      "name": "Форин",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "portfolio/60m/index.html"
+  },
+  {
+    "year": 2016,
+    "name": "Спутник — сообщество наставников и предпринимателей",
+    "customer": {
+      "name": "Форин",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://sputnik.global/"
+  },
+  {
+    "year": 2016,
+    "img": "img/portfolio/blueshotel.jpg",
+    "name": "Шаблон BluesHotel сайта отеля",
+    "descriptionImg": "img/portfolio/blueshotel.jpg",
+    "description": "Шаблон BluesHotel сайта отеля.",
+    "customer": {
+      "name": "Форин",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "portfolio/BluesHotel/index.html"
+  },
+  {
+    "year": 2015,
+    "img": "img/portfolio/kalinka.jpg",
+    "name": "Сайт мясокомбината Калинка",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "descriptionImg": "img/portfolio/kalinka.jpg",
+    "description": "Группа компаний «Калинка» основана в 1998 году и за это время успела себя зарекомендовать как стабильное и устойчивое предприятие с прогрессивными технологиями производства.<br>Сегодня «Калинка» - это одна из крупнейших мясоперерабатывающих компаний в Уральском регионе.",
+    "isExist": true,
+    "exLink": "https://www.kalinka74.ru/"
+  },
+  {
+    "year": 2015,
+    "img": "img/portfolio/kerg.jpg",
+    "name": "Керг Клуб",
+    "descriptionImg": "img/portfolio/kerg.jpg",
+    "description": "Автоцентр Керг в статусе официального дилера в городе Челябинске работает с 2002 г. и в течение многих лет показывает высокие результаты в продаже и сервисном обслуживании автомобилей, как легковых, так и коммерческих.",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://kerg-club.ru/chel/"
+  },
+  {
+    "year": 2015,
+    "img": "img/portfolio/traktor.jpg",
+    "name": "Сайт хоккейного клуба Трактор",
+    "descriptionImg": "img/portfolio/traktor.jpg",
+    "description": "Официальный сайт хоккейного клуба Трактор",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://hctraktor.org/"
+  },
+  {
+    "year": 2015,
+    "img": "img/portfolio/dextra.jpg",
+    "name": "Сайт интернет-агенства Dextra",
+    "descriptionImg": "img/portfolio/dextra.jpg",
+    "description": "Собственный сайт интернет-агенства Dextra",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://dextra.ru/"
+  },
+  {
+    "year": 2015,
+    "name": "Санаторий Изумруд Медицинский центр ЧТПЗ",
+    "img": "img/portfolio/izumrud.jpg",
+    "descriptionImg": "img/portfolio/izumrud.jpg",
+    "description": "Сайт санатория",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://izumrud-mc.ru/"
+  },
+  {
+    "year": 2015,
+    "name": "Доска объявлений Аванатра",
+    "img": "img/portfolio/avanatra.jpg",
+    "descriptionImg": "img/portfolio/avanatra.jpg",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://avanatra.ru/"
+  },
+  {
+    "year": 2015,
+    "name": "Портал OpenSauna",
+    "img": "img/portfolio/opensauna.jpg",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "http://opensauna.ru/"
+  },
+  {
+    "year": 2015,
+    "name": "Магазин модной одежды Online-fashion",
+    "img": "img/portfolio/online-fashion.jpg",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://www.online-fashion.ru/"
+  },
+  /////////////////////////////////////////////////////////////////////////////////
+  {
+    "year": 2015,
+    "name": "Сайт салона элитной керамики и сантехники INCRUSTO",
+    "img": "img/portfolio/incrusto.jpg",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://incrusto.ru/"
+  },
+  {
+    "year": 2015,
+    "name": "Сайт компании МВА",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/mva.jpg",
+    "isExist": true,
+    "exLink": "https://www.ptfmva.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Frontend фирменной CMS",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/dextra-cms.jpg",
+    "isExist": false,
+    "exLink": ""
+  },
+  {
+    "year": 2014,
+    "name": "Сайт агенства Zotov",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/zotov.jpg",
+    "isExist": true,
+    "exLink": "https://zotov-event.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Сайт медицинского центра Наркология",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/nark.jpg",
+    "isExist": true,
+    "exLink": "https://narkologia74.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Интернет-магазин профессионального инструмента",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/tools.jpg",
+    "isExist": true,
+    "exLink": "https://standarttool.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Сайт компании Вендорс",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/vendors.jpg",
+    "isExist": true,
+    "exLink": "https://www.torgavtomat.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Сайт компании Глобальные ресурсы",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/globalres.jpg",
+    "isExist": true,
+    "exLink": "https://globalres.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Интернет магазин ХК Трактор",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/traktor-store.jpg",
+    "isExist": true,
+    "exLink": "https://shoptraktor.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Страница генерального плана застройки для сайта посёлка Княжий",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://княжий.рф/genplan/"
+  },
+  {
+    "year": 2014,
+    "name": "Сайт группы производственный компаний Эмис",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://emis-kip.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Интернет-магазин сети аптек Рифарм",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://rifarm.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Торговая компания Химик",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://himik-ural.ru/"
+  },
+  {
+    "year": 2014,
+    "name": "Новые Технологии г. Пласт",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://смлпласт.рф/"
+  },
+  {
+    "year": 2014,
+    "name": "Стоматологическая клиника Птичка Тари",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://stom-tari.com/"
+  },
+  {
+    "year": 2014,
+    "name": "Лэндинг ИннЭко – ЮУрГУ",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": false
+  },
+  {
+    "year": 2014,
+    "name": "Интернет-магазин Вещи для дома",
+    "customer": {
+      "name": "Supra.pro",
+      "link": null
+    },
+    "isExist": false
+  },
+  {
+    "year": 2014,
+    "name": "Юридическая фирма Авангард",
+    "customer": {
+      "name": "Цифровой Элемент",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://авангард74.рф/"
+  },
+  {
+    "year": 2014,
+    "name": "ElectroStudio",
+    "customer": {
+      "name": "Supra.pro",
+      "link": null
+    },
+    "isExist": false
+  },
+  {
+    "year": 2013,
+    "name": "Интернет-магазин по продаже шин и дисков",
+    "customer": {
+      "name": "megashina74.ru",
+      "link": null
+    },
+    "isExist": false
+  },
+  {
+    "year": 2013,
+    "name": "Сайт доставки еды Хит Пицца",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": true,
+    "exLink": "https://hit-pizza.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Лэндинг акции для стоматологии «СитиСмайл»",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "isExist": false
+  },
+  {
+    "year": 2013,
+    "name": "Мобильная версия портала Челябинск Сегодня",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/cheltoday.jpg",
+    "isExist": true,
+    "exLink": "https://m.cheltoday.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Сайт компании Комфортика",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/komfortica.jpg",
+    "isExist": true,
+    "exLink": "https://komfortica.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Сайт детского игрового центра ЛЕГО",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/lego.jpg",
+    "isExist": true,
+    "exLink": "https://playconstructor.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Информационно-аналитический портал Челябинск Сегодня",
+    "customer": {
+      "name": "Dextra",
+      "link": "https://www.dextra.ru/"
+    },
+    "img": "img/portfolio/cheltoday.jpg",
+    "isExist": true,
+    "exLink": "https://cheltoday.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Сайт клуба практикующих врачей",
+    "customer": {
+      "name": "Автоматизация бизнеса",
+      "link": null
+    },
+    "img": "img/portfolio/ivrach.jpg",
+    "isExist": true,
+    "exLink": "https://ivrach.com/"
+  },
+  {
+    "year": 2013,
+    "name": "Сайт Лицея №77",
+    "customer": {
+      "name": "Лицей №77",
+      "link": null
+    },
+    "img": "img/portfolio/lyceum.jpg",
+    "isExist": true,
+    "exLink": "https://www.lyceum77.ru/"
+  },
+  {
+    "year": 2013,
+    "name": "Интернет-магазин электроники",
+    "customer": {
+      "name": "2eng",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://biztorg.ru/view/33865709?newsletter=126"
+  },
+  {
+    "year": 2012,
+    "name": "Промо-сайт мобильного приложения Poker Tools",
+    "customer": {
+      "name": "AppGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://pokertoolsapp.com/"
+  },
+  {
+    "year": 2012,
+    "name": "Сайт группы компаний Бизнес-Сервис",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "img": "img/portfolio/bis74.jpg",
+    "isExist": true,
+    "exLink": "https://www.bis74.ru/"
+  },
+  {
+    "year": 2012,
+    "name": "Сайт студии суши Япония",
+    "customer": {
+      "name": "Студия суши Япония",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://japan74.ru/"
+  },
+  {
+    "year": 2012,
+    "name": "Промо-сайт Взаботе",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://взаботеокаждом.рф/"
+  },
+  {
+    "year": 2012,
+    "name": "Система поиска и сравнения цен на товары первой необходимости Взаботе",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://vzabote.ru/"
+  },
+  {
+    "year": 2012,
+    "name": "Система управления контекстной рекламой TravelContext",
+    "customer": {
+      "name": "TravelContext",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://travelcontext.ru/"
+  },
+  {
+    "year": 2012,
+    "name": "Сайт студии суши Японамать",
+    "customer": {
+      "name": "Студия Японамать",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://japonamat.ru/"
+  },
+  {
+    "year": 2011,
+    "name": "Сайт компании Верничи",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "img": "img/portfolio/vernici.jpg",
+    "isExist": true,
+    "exLink": "https://www.vernici.ru/"
+  },
+  {
+    "year": 2011,
+    "name": "Сайт спортивных прогнозов",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "img": "img/portfolio/cleverbetting.jpg",
+    "isExist": true,
+    "exLink": "https://www.cleverbetting.ru/"
+  },
+  {
+    "year": 2011,
+    "name": "Гид по ценам Neiron",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://neiron.com/"
+  },
+  {
+    "year": 2010,
+    "name": "Сайт компании Компрессорная техника",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://kkt.su/"
+  },
+  {
+    "year": 2010,
+    "name": "Сайт санатория Жемчужина Урала",
+    "customer": {
+      "name": "1М-сервис",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://ural-pearl.ru/"
+  },
+  {
+    "year": 2010,
+    "name": "Сайт студии WebGranula",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://webgranula.ru/"
+  },
+  {
+    "year": 2010,
+    "name": "Сайт Института Информационных Технологий при ЧелГУ",
+    "customer": {
+      "name": "WebGranula",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://iit.csu.ru/"
+  },
+  {
+    "year": 2010,
+    "name": "Страница главного федерального инспектора Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://pravmin74.ru/default.aspx?p_id=1976"
+  },
+  {
+    "year": 2010,
+    "name": "Cайт группы компаний Россторм",
+    "customer": {
+      "name": "Грид-Инжиниринг",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://rosstrom.ru/"
+  },
+  {
+    "year": 2010,
+    "name": "Cайт министерства образования Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://minobr74.ru/"
+  },
+  {
+    "year": 2009,
+    "name": "Сайт компании Труд-Сервис",
+    "customer": {
+      "name": "1М-сервис",
+      "link": null
+    },
+    "img": "img/portfolio/trud.jpg",
+    "isExist": true,
+    "exLink": "https://www.trud-servis.ru/"
+  },
+  {
+    "year": 2009,
+    "name": "Компания Эксперт-Лизинг",
+    "customer": {
+      "name": "Грид-Инжиниринг",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://ekspert-leasing.ru/"
+  },
+  {
+    "year": 2009,
+    "name": "Проект mahatma.me",
+    "customer": {
+      "name": "Грид-Инжиниринг",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://mahatma.me/"
+  },
+  {
+    "year": 2009,
+    "name": "Сайт ресторана Сицилия",
+    "customer": {
+      "name": "1М-сервис",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://sicilia74.ru/"
+  },
+  {
+    "year": 2009,
+    "name": "Студия переплета Релье",
+    "customer": {
+      "name": "Компания Ковчег Урал",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://relier.ru/"
+  },
+  {
+    "year": 2009,
+    "name": "Студия Rusdeco",
+    "customer": {
+      "name": "Компания Ковчег Урал",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://rusdeco.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Сайт компании Ковчег Урал",
+    "customer": {
+      "name": "Компания Ковчег Урал",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://kovchegural.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Сайт компании Торекс",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://torex74.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Главное контрольное управление Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://gku74.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Административная реформа в Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://adminref74.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Общественная палата Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://op74.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Челябинское региональное объединение работодателей ПРОМАСС",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://promas.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Следственное управление Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://chelsupr.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Министерство культуры Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://culture-chel.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Министерство финансов Челябинской области",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://minfin74.ru/"
+  },
+  {
+    "year": 2008,
+    "name": "Группа компаний Южуралзолото",
+    "customer": {
+      "name": "Студия weB2Biz",
+      "link": null
+    },
+    "isExist": true,
+    "exLink": "https://ugold.ru/"
+  },
+  {
+    "year": 2005
+  }
+]
+
