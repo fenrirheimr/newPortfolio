@@ -1,16 +1,9 @@
-import dotenvExpand from 'dotenv-expand';
 import { loadEnv, defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import webfontDownload from 'vite-plugin-webfont-dl';
 
 export default defineConfig(({ mode }) => {
-  // This check is important!
-  if (mode === 'development') {
-    const env = loadEnv(mode, process.cwd(), '');
-    dotenvExpand.expand({ parsed: env });
-  }
-
   return {
     plugins: [
       vue(),
@@ -21,7 +14,6 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js'
       }
     },
     css: {
