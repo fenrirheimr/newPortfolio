@@ -1,14 +1,13 @@
 <script setup>
-
 const props = defineProps({
   title: String,
-  icon: Object
+  icon: Object,
 })
 
 // const content = data
 // console.log('props', props)
-
 </script>
+
 <template>
   <div class="tag">
     <div class="title">
@@ -16,6 +15,7 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
 <style scoped lang="scss">
 .tag {
   @include flex(row, flex-start, center);

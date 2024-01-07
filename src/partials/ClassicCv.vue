@@ -1,22 +1,62 @@
 <script setup>
-import { onMounted, onUnmounted, ref, defineEmits, computed } from "vue";
-import { RouterLink } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+import AnimatedButton from '@/components/AnimatedButton.vue'
 import ArrowDown from '@/components/icons/ArrowDown.vue'
+import TechIcons from '@/components/icons/TechIcons.vue'
 import Accordion from '@/vendors/accordion.js'
-import Close from "@/components/icons/Close.vue";
 
 defineProps({
-  age: Number
+  age: Number,
 })
+
+const router = useRouter()
 
 const skills = ref('.skills')
 
+function Acc(el) {
+  return new Accordion(el)
+}
+
 onMounted(() => {
-  new Accordion(skills.value);
-});
+  Acc(skills.value)
+})
+
+const techName = [
+  'Javascript',
+  'Vue',
+  'React',
+  'Vuetify',
+  // 'Adobe Photoshop',
+  'Git',
+  'Github',
+  'Axios',
+  'Lodash',
+  'Bootstrap',
+  // 'bower',
+  // 'Compass',
+  'HTML5',
+  'Sass',
+  'CSS3',
+  'Figma',
+  // 'Gitlab',
+  // 'Gulp',
+  // 'jQuery',
+  // 'Keystonejs',
+  'npm',
+  // 'Wordpress',
+  'yarn',
+  'Postman',
+]
+
+function handleNav() {
+  router.push({
+    path: '/portfolio',
+  })
+}
 
 const backup = true
-
 </script>
 
 <template>
@@ -24,25 +64,31 @@ const backup = true
     <div class="row">
       <div class="photo-wrapper">
         <img src="@/assets/740080754.jpeg" class="photo">
-        <RouterLink :to="'/portfolio'" class="link">В портфолио</RouterLink>
+
+        <AnimatedButton
+          class="button"
+          title="В портфолио"
+          size="medium"
+          @click="handleNav"
+        />
       </div>
       <div class="name-wrapper">
         <h1>Владимир Глушков</h1>
 
         <div class="employment">
-          <div>
+          <div class="item">
             <strong>Занятость:</strong> полная занятость, частичная занятость, проектная работа.
           </div>
-          <div>
+          <div class="item">
             <strong>График работы:</strong> полный день, гибкий график, удаленная работа.
           </div>
-          <div>
-            <strong>Для связи:</strong>&nbsp;
+          <div class="item">
+            <strong>Для связи:</strong>
             <a href="https://t.me/fenrirheimr" target="_blank">@fenrirheimr</a>,
             <a href="tel:+79068635088" target="_blank">8 (906) 863-50-88</a>,
             <a href="mailto:xhtmlblog@mail.com" target="_blank">xhtmlblog@mail.com</a>
           </div>
-          <div>
+          <div class="item">
             <details ref="skills" class="skills" open>
               <summary>
                 Навыки
@@ -86,7 +132,7 @@ const backup = true
                     CVS:
                   </div>
                   <div class="text">
-                    git, svn;
+                    git;
                   </div>
                 </div>
                 <div class="s-row">
@@ -113,23 +159,25 @@ const backup = true
                     Webstorm, IntelliJ, Android Studio;
                   </div>
                 </div>
-                <div class="c" v-if="!backup">
-
-                  Platforms: Nodejs,<br />
-                  Protocols: HTTP, HTTPS, REST,<br />
-                  <br />
-                  DB: MySQL, Mongo,<br />
-                  Сборка: Jenkins,<br />
-
+                <div v-if="!backup" class="c">
+                  Platforms: Nodejs,<br>
+                  Protocols: HTTP, HTTPS, REST,<br>
+                  <br>
+                  DB: MySQL, Mongo,<br>
+                  Сборка: Jenkins,<br>
                 </div>
               </div>
             </details>
+            <div class="tech-icon-wrapper">
+              <TechIcons v-for="(name, i) in techName" :key="i" :name="name" class="icon" />
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <style scoped lang="scss">
 .content {
   @include scrollable(#352E2E, transparent);
@@ -144,17 +192,19 @@ const backup = true
     }
 
     .photo-wrapper {
-      @include flex(column, flex-start, flex-start);
-      gap: 5vw;
+      @include flex(column, flex-start, center);
+      max-width: 384px;
+      gap: 1vw;
       .photo {
         width: 20vw;
         height: 20vw;
       }
 
-      .link {}
+      .button {}
     }
 
     .name-wrapper {
+      width: 100%;
       h1 {
         @include font-style($font-size: 3vw, $font-weight: 500, $line-height: 120%, $color: #352E2E);
         margin-top: 0;
@@ -163,7 +213,13 @@ const backup = true
         @include flex(column, flex-start, flex-start);
         @include font-style($font-size: 1.5vw, $font-weight: 400, $line-height: 120%, $color: #352E2E);
         gap: 1.3vw;
+        .item {
+          @include flex(row, flex-start, flex-start);
+          width: 100%;
+          gap: .3vw;
+        }
         .skills {
+          width: 40%;
           summary {
             @include flex(row, flex-start, center);
             @include font-style($font-size: 1.5vw, $font-weight: 700, $line-height: 120%, $color: #352E2E);
@@ -194,6 +250,14 @@ const backup = true
               animation: spin 0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             }
           }
+        }
+        .tech-icon-wrapper {
+          @include flex(row, flex-start, flex-start);
+          width: 50%;
+          flex-wrap: wrap;
+          //width: 100%;
+          gap: 2vw 3vw;
+          margin-top: 54px;
         }
       }
     }

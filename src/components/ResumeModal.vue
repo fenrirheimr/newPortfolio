@@ -1,35 +1,32 @@
 <script setup>
-import { onMounted, onUnmounted, ref, defineEmits } from "vue";
-import { RouterView } from 'vue-router'
+import { ref } from 'vue'
 
+import debounce from 'lodash/debounce'
 import Close from '@/components/icons/Close.vue'
-import Tabs from "@/components/Tabs.vue";
+import Tabs from '@/components/Tabs.vue'
 
-import useModalStore from "@/stores/modalas";
-import debounce from "lodash/debounce";
+// import useModalStore from '@/stores/modalas'
 
-const store = useModalStore();
 defineProps({
   show: Boolean,
 })
-
 const emit = defineEmits(['close'])
-const modal = ref(null);
+// const store = useModalStore()
+const modal = ref(null)
 
 const removed = debounce(() => {
   emit('close')
 }, 1000)
 
-const closeModal = () => {
-  modal.value.classList.add('removing');
+function closeModal() {
+  modal.value.classList.add('removing')
   removed()
 }
-
 </script>
 
 <template>
   <Teleport to="body">
-    <div class="modal-mask" v-if="show" ref="modal">
+    <div v-if="show" ref="modal" class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="close-modal">
@@ -37,7 +34,6 @@ const closeModal = () => {
           </div>
 
           <Tabs />
-
         </div>
       </div>
     </div>
@@ -80,8 +76,6 @@ const closeModal = () => {
   @include flex(row, center, center);
 }
 
-
-
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
@@ -95,7 +89,6 @@ const closeModal = () => {
   display: block;
   margin-top: 1rem;
 }
-
 
 .sb-enter-active {}
 .sb-leave-active {
@@ -182,5 +175,4 @@ const closeModal = () => {
     opacity: 0;
   }
 }
-
 </style>

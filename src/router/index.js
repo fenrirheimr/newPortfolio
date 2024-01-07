@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import PortfolioPage from '../views/PortfolioPage.vue'
-import ScssView from '../views/PortfolioPage.vue'
-import JsView from '../views/PortfolioPage.vue'
+
+// import ScssView from '../views/PortfolioPage.vue'
+// import JsView from '../views/PortfolioPage.vue'
 
 const routes = [
   {
@@ -12,12 +13,12 @@ const routes = [
     meta: {
       title: 'На главную',
       spinner: true,
-      duration: 1500
+      duration: 1500,
     },
     children: [
-      { path: 'scss', component: ScssView }, // default tab that shows on /about route
-      { path: 'js', component: JsView}
-    ]
+      // { path: 'scss', component: ScssView }, // default tab that shows on /about route
+      // { path: 'js', component: JsView },
+    ],
   },
   {
     path: '/portfolio',
@@ -26,8 +27,8 @@ const routes = [
     meta: {
       title: 'В портфолио',
       spinner: true,
-      duration: 500
-    }
+      duration: 500,
+    },
   },
   {
     path: '/blog',
@@ -36,14 +37,14 @@ const routes = [
     meta: {
       title: 'Блог',
       spinner: true,
-      duration: 500
-    }
-  }
+      duration: 500,
+    },
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
 export default router

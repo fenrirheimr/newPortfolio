@@ -1,12 +1,11 @@
 <script setup>
 import { useRoute } from 'vue-router'
-import Loader from "@/components/Loader.vue";
-import Portfolio from "@/partials/Portfolio.vue";
+import Loader from '@/components/Loader.vue'
+import Portfolio from '@/partials/Portfolio.vue'
 
 const route = useRoute()
 
 // console.log('>>>>', route.meta)
-
 </script>
 
 <template>
@@ -24,6 +23,7 @@ const route = useRoute()
     </Teleport>
   </section>
 </template>
+
 <style scoped lang="scss">
 section {
   @include flex(column, center, center);

@@ -1,44 +1,45 @@
 <script setup>
-import { ref, onMounted, getCurrentInstance, provide } from 'vue'
+import { onMounted, ref } from 'vue'
 import debounce from 'lodash/debounce'
-import mouseMove from '@/utils/btnAnimations.js'
 
-import ResumeModal from "@/components/ResumeModal.vue";
+import AnimatedButton from '@/components/AnimatedButton.vue'
+import ResumeModal from '@/components/ResumeModal.vue'
 
 defineProps({
   title: String,
 })
 
-const head = ref(null);
-const showModal = ref(false);
-const showModalBtn = ref(null);
+const head = ref(null)
+const showModal = ref(false)
+const animatedButton = ref(null)
 
 const isLoaded = debounce(() => {
-  head.value.classList.add('loaded');
-  showModalBtn.value.classList.add('loaded');
+  head.value.classList.add('loaded')
+  animatedButton.value.animatedButton.classList.add('loaded')
 }, 2000)
 
 onMounted(() => {
   isLoaded()
-});
-
+})
 </script>
 
 <template>
-  <h1 ref="head">{{ title }}</h1>
+  <h1 ref="head">
+    {{ title }}
+  </h1>
 
-  <div @click="showModal = !showModal" ref="showModalBtn" class="btn-6" @mouseenter="mouseMove" @mouseleave="mouseMove">
-    Смотреть
-    <span></span>
-  </div>
+  <AnimatedButton
+    ref="animatedButton"
+    title="Смотреть"
+    class="button"
+    size="large" @click="showModal = !showModal"
+  />
 
   <ResumeModal :show="showModal" @close="showModal = false" />
 </template>
 
 <style scoped lang="scss">
-
 h1 {
-  @include font-style($font-size: calc(100vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: random-color($max:214));
   @include font-style($font-size: calc(100vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
   opacity: 0;
   position: relative;
@@ -55,51 +56,57 @@ h1 {
   }
 }
 
-.btn-6 {
-  @include font-style($font-size: 2vw, $font-weight: 500, $line-height: 120%, $color: $btn-color);
-
-  text-decoration: none;
-  line-height: $btn-height;
-  transition: 0.5s ease-in-out;
-  overflow: hidden;
-  width: 100%;
-  max-width: 20vw;
-  position: relative;
-  text-align: center;
-  border: 1px solid currentColor;
+.button {
   opacity: 0;
-  border-radius: 3px;
+  border: 1px solid currentColor;
   &.loaded {
     animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
-
-  & > * {
-    transition: 0.5s ease-in-out;
-  }
-
-  span {
-    @include absolute();
-    display: block;
-    @include size(0);
-    border-radius: 50%;
-    background-color: $btn-color-dark;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-
-  &:hover {
-    color: tint($btn-color, 55%);
-    cursor: pointer;
-    span {
-      @include size(225%, $btn-width*2.25);
-    }
-  }
-
-  &:active {
-    background-color: $btn-color;
-  }
 }
+
+//.btn-6 {
+//
+//
+//  text-decoration: none;
+//  line-height: $btn-height;
+//  transition: 0.5s ease-in-out;
+//  overflow: hidden;
+//  width: 100%;
+//  max-width: 20vw;
+//  position: relative;
+//  text-align: center;
+//
+//  opacity: 0;
+//  border-radius: 3px;
+//
+//
+//  & > * {
+//    transition: 0.5s ease-in-out;
+//  }
+//
+//  span {
+//    @include absolute();
+//    display: block;
+//    @include size(0);
+//    border-radius: 50%;
+//    background-color: $btn-color-dark;
+//    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+//    transform: translate(-50%, -50%);
+//    z-index: -1;
+//  }
+//
+//  &:hover {
+//    color: tint($btn-color, 55%);
+//    cursor: pointer;
+//    span {
+//      @include size(225%, $btn-width*2.25);
+//    }
+//  }
+//
+//  &:active {
+//    background-color: $btn-color;
+//  }
+//}
 
 @keyframes text-pop-up-top {
   0% {
@@ -136,5 +143,4 @@ h1 {
     opacity: 1;
   }
 }
-
 </style>

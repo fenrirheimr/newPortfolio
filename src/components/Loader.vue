@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import debounce from 'lodash/debounce'
 
 const props = defineProps({
@@ -7,35 +7,35 @@ const props = defineProps({
   duration: Number,
 })
 
-const loaderWrapper = ref(null);
-const spinner = ref(null);
-let open = ref(false);
+const loaderWrapper = ref(null)
+const spinner = ref(null)
+const open = ref(false)
 
 const isLoaded = debounce(() => {
-  open.value = true;
+  open.value = true
 }, props.duration || 1500)
 
 const isLoading = debounce(() => {
-  loaderWrapper.value.classList.add('open');
-  if(props.spinner) {
-    spinner.value.classList.add('open');
-  }
+  loaderWrapper.value.classList.add('open')
+  if (props.spinner)
+    spinner.value.classList.add('open')
+
   isLoaded()
 }, props.duration || 1500)
 
 onMounted(() => {
   isLoading()
-});
-
+})
 </script>
 
 <template>
-  <div class="loader-wrapper" ref="loaderWrapper" v-if="!open">
-    <div class="triangle left"></div>
-    <div class="triangle right"></div>
-    <span v-if="props.spinner" class="spinner" ref="spinner"></span>
+  <div v-if="!open" ref="loaderWrapper" class="loader-wrapper">
+    <div class="triangle left" />
+    <div class="triangle right" />
+    <span v-if="props.spinner" ref="spinner" class="spinner" />
   </div>
 </template>
+
 <style scoped lang="scss">
 .loader-wrapper {
   .triangle {
@@ -82,7 +82,7 @@ onMounted(() => {
     height: 8vw;
     border-radius: 50%;
     animation: rotate 1s linear infinite;
-    z-index: 2;
+    z-index: 1001;
     &::before {
       content: "";
       box-sizing: border-box;

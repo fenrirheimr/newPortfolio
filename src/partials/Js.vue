@@ -1,7 +1,6 @@
 <script setup>
-
 defineProps({
-  age: Number
+  age: Number,
 })
 
 // import skillStore from "@/stores/portfolio.js";
@@ -11,112 +10,202 @@ defineProps({
 // store.fetchSkills()
 //
 // console.log('???', store.getSkills.items)
-
 </script>
 
 <template>
   <div class="content">
     <div class="js-row">
       <div class="global">
-        <div class="command">import</div>
-        <div class="object">{ AbstractHuman } </div>
-        <div class="command">from</div>
-        <div class="value">'world/humankind';</div>
+        <div class="command">
+          import
+        </div>
+        <div class="object">
+          { AbstractHuman }
+        </div>
+        <div class="command">
+          from
+        </div>
+        <div class="value">
+          'world/humankind';
+        </div>
       </div>
     </div>
     <div class="js-row">
       <div class="global">
-        <div class="command">import</div>
-        <div class="object">{ experience }</div>
-        <div class="command">from</div>
-        <div class="value">'head/brain';</div>
+        <div class="command">
+          import
+        </div>
+        <div class="object">
+          { experience }
+        </div>
+        <div class="command">
+          from
+        </div>
+        <div class="value">
+          'head/brain';
+        </div>
       </div>
     </div>
     <div class="js-row">
       <div class="global">
-        <div class="command">import</div>
-        <div class="object">skillStore</div>
-        <div class="command">from</div>
-        <div class="value">'@/stores/skills.js';</div>
+        <div class="command">
+          import
+        </div>
+        <div class="object">
+          skillStore
+        </div>
+        <div class="command">
+          from
+        </div>
+        <div class="value">
+          '@/stores/skills.js';
+        </div>
       </div>
     </div>
 
-    <hr class="divider" />
+    <hr class="divider">
 
     <div class="js-row">
       <div class="global">
-        <div class="command">export default class</div>
-        <div class="class-name">Myself</div>
-        <div class="command">extends</div>
-        <div class="object">AbstractHuman</div>
+        <div class="command">
+          export default class
+        </div>
+        <div class="class-name">
+          Myself
+        </div>
+        <div class="command">
+          extends
+        </div>
+        <div class="object">
+          AbstractHuman
+        </div>
         <i class="symbol">{</i>
       </div>
     </div>
     <div class="js-row two-level">
       <div class="global ml20">
-        <div class="command">constructor</div>
+        <div class="command">
+          constructor
+        </div>
         <i class="symbol">(</i>
-        <div class="var">props</div>
+        <div class="var">
+          props
+        </div>
         <i class="symbol">)</i>
         <i class="symbol">{</i>
         <div class="inner">
-
           <div class="global">
-            <div class="num">super</div>
+            <div class="num">
+              super
+            </div>
             <i class="symbol">(</i>
-            <div class="var">props</div>
+            <div class="var">
+              props
+            </div>
             <i class="symbol">)</i>
           </div>
           <div class="global">
-            <div class="num mr0">this</div>
-            <div class="object ml0">.state</div>
+            <div class="num mr0">
+              this
+            </div>
+            <div class="object ml0">
+              .state
+            </div>
             <i class="symbol"> = {</i>
             <div class="inner">
               <div class="row">
-                <div class="object">name:</div>
-                <div class="text mr0">'Vladimir Glushkov'</div>
+                <div class="object">
+                  name:
+                </div>
+                <div class="text mr0">
+                  'Vladimir Glushkov'
+                </div>
                 <i class="symbol ml0">,</i>
               </div>
               <div class="row">
-                <div class="object">age:</div>
-                <div class="text ml0">{{ age }} years</div>
+                <div class="object">
+                  age:
+                </div>
+                <div class="text ml0">
+                  {{ age }} years
+                </div>
                 <i class="symbol ml0">,</i>
               </div>
               <div class="row">
-                <div class="object">experience:</div>
-                <div class="object ml0">experience.items</div>
+                <div class="object">
+                  experience:
+                </div>
+                <div class="object ml0">
+                  experience.items
+                </div>
                 <i class="symbol ml0">,</i>
               </div>
               <div class="row">
-                <div class="object">skills: [</div>
+                <div class="object">
+                  skills: [
+                </div>
                 <div class="skills mr0">
-                  <div class="row">lang: [
-                    <div class="text">'HTML/HAML'</div>,
-                    <div class="text">'SASS/SCSS'</div>,
-                    <div class="text">'JS'</div>
-                    ],</div>
-                  <div class="row">soft: [
-                    <div class="text">'Ubuntu Linux'</div>,
-                    <div class="text">'WebStorm'</div>,
-                    <div class="text">'Photoshop/Figma'</div>
-                    ] ,</div>
-                  <div class="row">frameworks: [
-                    <div class="text">'vue.js'</div>,
-                    <div class="text">'react native'</div>,
-                    <div class="text">'vuetify'</div>,
-                    <div class="text">'bulma'</div>,
-                    <div class="text">'bootstrap'</div>
-            ]</div>
+                  <div class="row">
+                    lang: [
+                    <div class="text">
+                      'HTML/HAML'
+                    </div>,
+                    <div class="text">
+                      'SASS/SCSS'
+                    </div>,
+                    <div class="text">
+                      'JS'
+                    </div>
+                    ],
+                  </div>
+                  <div class="row">
+                    soft: [
+                    <div class="text">
+                      'Ubuntu Linux'
+                    </div>,
+                    <div class="text">
+                      'WebStorm'
+                    </div>,
+                    <div class="text">
+                      'Photoshop/Figma'
+                    </div>
+                    ] ,
+                  </div>
+                  <div class="row">
+                    frameworks: [
+                    <div class="text">
+                      'vue.js'
+                    </div>,
+                    <div class="text">
+                      'react native'
+                    </div>,
+                    <div class="text">
+                      'vuetify'
+                    </div>,
+                    <div class="text">
+                      'bulma'
+                    </div>,
+                    <div class="text">
+                      'bootstrap'
+                    </div>
+                    ]
+                  </div>
                 </div>
                 <i class="symbol ml0">],</i>
               </div>
               <div class="row">
-                <div class="object">phoneNumber:</div>
-                <div class="num ml0">8.906.863.50.88</div>
+                <div class="object">
+                  phoneNumber:
+                </div>
+                <div class="num ml0">
+                  8.906.863.50.88
+                </div>
                 <i class="symbol ml0">,</i>
               </div>
               <div class="row">
-                <div class="object">email:</div>
+                <div class="object">
+                  email:
+                </div>
                 <div class="array">
                   <i class="symbol ml0">[</i>
                   <a href="mailto:xhtmlblog@mail.com" target="_blank">'xhtmlblog@mail.com'</a><i class="symbol">,</i>
@@ -132,7 +221,7 @@ defineProps({
         <i class="symbol">}</i>
       </div>
 
-      <hr class="divider" />
+      <hr class="divider">
 
       <div class="global ml20">
         <div class="func">
@@ -140,50 +229,45 @@ defineProps({
         </div>
         <div class="inner">
           <div class="row">
-            <div class="command">const</div>
-            <div class="object">newWork</div>
-            <div class="command">=</div> <i class="symbol">[</i>
+            <div class="command">
+              const
+            </div>
+            <div class="object">
+              newWork
+            </div>
+            <div class="command">
+              =
+            </div> <i class="symbol">[</i>
             <div class="inner">
               <div class="row">
                 {
                 <div class="inner mx5">
                   <div class="row">
-                    year: <div class="num">06.2019-08.2023</div>,
+                    year: <div class="num">
+                      06.2019-08.2023
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    employer: <div class="text"><a href="https://Chrono.tech/" target="_blank" rel="nofollow">'Chrono.tech'</a></div>,
+                    employer: <div class="text">
+                      <a href="https://Chrono.tech/" target="_blank" rel="nofollow">'Chrono.tech'</a>
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    position: <div class="text">'frontend developer'</div>
+                    position: <div class="text">
+                      'frontend developer'
+                    </div>
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    job-responsibilities: <div class="text">'Frontend for the timex.io crypto exchange and for the management system of this exchange<br />
-                    Development of a mobile application for the exchange using React Native'</div>
-                  </div>
-                </div>
-                },
-              </div>
-              <div class="row">
-                {
-                <div class="inner mx5">
-                  <div class="row">
-                    year: <div class="num">07.2018-06.2019</div>,
-                  </div>
-                </div>
-                <div class="inner mx5">
-                  <div class="row">
-                    employer: <div class="text">'P&B Stratwork'</div>,
-                  </div>
-                </div>
-                <div class="inner mx5">
-                  <div class="row">
-                    position: <div class="text">'frontend developer'</div>
+                    job-responsibilities: <div class="text">
+                      'Frontend for the timex.io crypto exchange and for the management system of this exchange<br>
+                      Development of a mobile application for the exchange using React Native'
+                    </div>
                   </div>
                 </div>
                 },
@@ -192,17 +276,23 @@ defineProps({
                 {
                 <div class="inner mx5">
                   <div class="row">
-                    year: <div class="num">07.2017-12.2017</div>,
+                    year: <div class="num">
+                      07.2018-06.2019
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    employer: <div class="text">'D-Element Internet Agency'</div>,
+                    employer: <div class="text">
+                      'P&B Stratwork'
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    position: <div class="text">'frontend developer'</div>
+                    position: <div class="text">
+                      'frontend developer'
+                    </div>
                   </div>
                 </div>
                 },
@@ -211,17 +301,48 @@ defineProps({
                 {
                 <div class="inner mx5">
                   <div class="row">
-                    year: <div class="num">2016-2017</div>,
+                    year: <div class="num">
+                      07.2017-12.2017
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    employer: <div class="text"><a href="https://radar-online.ru/" target="_blank" rel="nofollow">'Radar Advertising'</a></div>,
+                    employer: <div class="text">
+                      'D-Element Internet Agency'
+                    </div>,
                   </div>
                 </div>
                 <div class="inner mx5">
                   <div class="row">
-                    position: <div class="text">'frontend developer'</div>
+                    position: <div class="text">
+                      'frontend developer'
+                    </div>
+                  </div>
+                </div>
+                },
+              </div>
+              <div class="row">
+                {
+                <div class="inner mx5">
+                  <div class="row">
+                    year: <div class="num">
+                      2016-2017
+                    </div>,
+                  </div>
+                </div>
+                <div class="inner mx5">
+                  <div class="row">
+                    employer: <div class="text">
+                      <a href="https://radar-online.ru/" target="_blank" rel="nofollow">'Radar Advertising'</a>
+                    </div>,
+                  </div>
+                </div>
+                <div class="inner mx5">
+                  <div class="row">
+                    position: <div class="text">
+                      'frontend developer'
+                    </div>
                   </div>
                 </div>
                 }
@@ -232,7 +353,11 @@ defineProps({
         </div>
         <div class="inner">
           <div class="row">
-            <div class="command">return</div> [ ...newWork, ...<div class="num">this</div>.experience];
+            <div class="command">
+              return
+            </div> [ ...newWork, ...<div class="num">
+              this
+            </div>.experience];
           </div>
         </div>
         <i class="symbol">}</i>
@@ -241,6 +366,7 @@ defineProps({
     <i class="symbol">}</i>
   </div>
 </template>
+
 <style scoped lang="scss">
 .content {
   @include scrollable(#d16daa, transparent);

@@ -1,39 +1,53 @@
 <script setup>
-
 defineProps({
-  age: Number
+  age: Number,
 })
-
 </script>
 
 <template>
   <div class="content">
     <div class="scss-row">
       <div class="global">
-        <div class="command">@import</div>
-        <div class="value">'head/brain';</div>
+        <div class="command">
+          @import
+        </div>
+        <div class="value">
+          'head/brain';
+        </div>
       </div>
     </div>
     <div class="scss-row">
       <div class="global">
-        <div class="command">@import</div>
-        <div class="value">git, yarn, npm, vite, webpack, gulp;</div>
+        <div class="command">
+          @import
+        </div>
+        <div class="value">
+          git, yarn, npm, vite, webpack, gulp;
+        </div>
       </div>
     </div>
     <div class="scss-row">
       <div class="global">
-        <div class="command">@import</div>
-        <div class="value">'humility';</div>
+        <div class="command">
+          @import
+        </div>
+        <div class="value">
+          'humility';
+        </div>
       </div>
     </div>
-    <hr class="divider" />
+    <hr class="divider">
     <div class="scss-row">
       <div class="selector">
         #objective <i class="brace">{</i>
       </div>
       <div class="declaration">
-        <div class="property">employment<i class="colon">:</i></div>
-        <div class="property-value">'remote job'<i class="comma">,</i> full-time<i class="comma">,</i> part-time<i class="comma">,</i> freelance<i class="semicolon">;</i></div>
+        <div class="property">
+          employment<i class="colon">:</i>
+        </div>
+        <div class="property-value">
+          'remote job'<i class="comma">,</i> full-time<i class="comma">,</i> part-time<i class="comma">,</i> freelance<i class="semicolon">;</i>
+        </div>
       </div>
       <i class="brace">}</i>
     </div>
@@ -42,19 +56,28 @@ defineProps({
         #skills <i class="brace">{</i>
       </div>
       <div class="declaration">
-        <div class="property">language<i class="colon">:</i></div>
-        <div class="property-value">HTML/HAML<i class="comma">,</i> SASS/SCSS<i class="comma">,</i> JS<i class="semicolon">;</i></div>
+        <div class="property">
+          language<i class="colon">:</i>
+        </div>
+        <div class="property-value">
+          HTML/HAML<i class="comma">,</i> SASS/SCSS<i class="comma">,</i> JS<i class="semicolon">;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">software<i class="colon">:</i></div>
+        <div class="property">
+          software<i class="colon">:</i>
+        </div>
         <div class="property-value">
           Ubuntu Linux<i class="comma">,</i>
           WebStorm<i class="comma">,</i>
           Photoshop/Figma<i class="comma">,</i>&nbsp;
-          <i class="semicolon">etc.;</i></div>
+          <i class="semicolon">etc.;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">frameworks<i class="colon">:</i></div>
+        <div class="property">
+          frameworks<i class="colon">:</i>
+        </div>
         <div class="property-value">
           vue.js<i class="comma">,</i>
           react native<i class="comma">,</i>
@@ -74,32 +97,52 @@ defineProps({
           .fourth <i class="brace">{</i>
         </div>
         <div class="declaration">
-          <div class="property">year<i class="colon">:</i></div>
+          <div class="property">
+            year<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="num">06.2019-08.2023</div>
-            <i class="semicolon">;</i></div>
+            <div class="num">
+              06.2019-08.2023
+            </div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">employer<i class="colon">:</i></div>
+          <div class="property">
+            employer<i class="colon">:</i>
+          </div>
           <div class="property-value">
             <a href="https://Chrono.tech/" target="_blank" rel="nofollow">Chrono.tech</a>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">position<i class="colon">:</i></div>
+          <div class="property">
+            position<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="command">@include</div>&nbsp;
-            <div class="property">position</div><i class="comma">(</i>
-            <div class="var">$frontend developer</div>
+            <div class="command">
+              @include
+            </div>&nbsp;
+            <div class="property">
+              position
+            </div><i class="comma">(</i>
+            <div class="var">
+              $frontend developer
+            </div>
             <i class="comma">)</i>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration two-row">
-          <div class="property">job-responsibilities<i class="colon">:</i></div>
+          <div class="property">
+            job-responsibilities<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            Frontend for the timex.io crypto exchange and for the management system of this exchange<br />
+            Frontend for the timex.io crypto exchange and for the management system of this exchange<br>
             Development of a mobile application for the exchange using React Native
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <i class="brace">}</i>
       </div>
@@ -109,54 +152,87 @@ defineProps({
           .third <i class="brace">{</i>
         </div>
         <div class="declaration">
-          <div class="property">year<i class="colon">:</i></div>
+          <div class="property">
+            year<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="num">07.2018-06.2019</div>
-            <i class="semicolon">;</i></div>
+            <div class="num">
+              07.2018-06.2019
+            </div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">employer<i class="colon">:</i></div>
+          <div class="property">
+            employer<i class="colon">:</i>
+          </div>
           <div class="property-value">
             P&B Stratwork
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">position<i class="colon">:</i></div>
+          <div class="property">
+            position<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="command">@include</div>&nbsp;
-            <div class="property">position</div><i class="comma">(</i>
-            <div class="var">$frontend developer</div>
+            <div class="command">
+              @include
+            </div>&nbsp;
+            <div class="property">
+              position
+            </div><i class="comma">(</i>
+            <div class="var">
+              $frontend developer
+            </div>
             <i class="comma">)</i>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <i class="brace">}</i>
       </div>
-
 
       <div class="declaration">
         <div class="selector">
           .second <i class="brace">{</i>
         </div>
         <div class="declaration">
-          <div class="property">year<i class="colon">:</i></div>
+          <div class="property">
+            year<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="num">07.2017-12.2017</div>
-            <i class="semicolon">;</i></div>
+            <div class="num">
+              07.2017-12.2017
+            </div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">employer<i class="colon">:</i></div>
+          <div class="property">
+            employer<i class="colon">:</i>
+          </div>
           <div class="property-value">
             D-Element Internet Agency
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">position<i class="colon">:</i></div>
+          <div class="property">
+            position<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="command">@include</div>&nbsp;
-            <div class="property">position</div><i class="comma">(</i>
-            <div class="var">$frontend developer</div>
+            <div class="command">
+              @include
+            </div>&nbsp;
+            <div class="property">
+              position
+            </div><i class="comma">(</i>
+            <div class="var">
+              $frontend developer
+            </div>
             <i class="comma">)</i>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <i class="brace">}</i>
       </div>
@@ -166,25 +242,42 @@ defineProps({
           .first <i class="brace">{</i>
         </div>
         <div class="declaration">
-          <div class="property">year<i class="colon">:</i></div>
+          <div class="property">
+            year<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="num">2016-2017</div>
-            <i class="semicolon">;</i></div>
+            <div class="num">
+              2016-2017
+            </div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">employer<i class="colon">:</i></div>
+          <div class="property">
+            employer<i class="colon">:</i>
+          </div>
           <div class="property-value">
             <a href="https://radar-online.ru/" target="_blank" rel="nofollow">Radar Advertising</a>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">position<i class="colon">:</i></div>
+          <div class="property">
+            position<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="command">@include</div>&nbsp;
-            <div class="property">position</div><i class="comma">(</i>
-            <div class="var">$frontend developer</div>
+            <div class="command">
+              @include
+            </div>&nbsp;
+            <div class="property">
+              position
+            </div><i class="comma">(</i>
+            <div class="var">
+              $frontend developer
+            </div>
             <i class="comma">)</i>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <i class="brace">}</i>
       </div>
@@ -194,28 +287,51 @@ defineProps({
           .zero <i class="brace">{</i>
         </div>
         <div class="declaration">
-          <div class="property">year<i class="colon">:</i></div>
+          <div class="property">
+            year<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="num">2005-2016</div>
-            <i class="semicolon">;</i></div>
+            <div class="num">
+              2005-2016
+            </div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">employer<i class="colon">:</i></div>
+          <div class="property">
+            employer<i class="colon">:</i>
+          </div>
           <div class="property-value">
             several companies and studios involved in website development
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <div class="declaration">
-          <div class="property">position<i class="colon">:</i></div>
+          <div class="property">
+            position<i class="colon">:</i>
+          </div>
           <div class="property-value">
-            <div class="command">@include</div>&nbsp;
-            <div class="property">position</div><i class="comma">(</i>
-            <div class="var">$content-manager</div><i class="comma">,</i>
-            <div class="var">$designer</div><i class="comma">,</i>
-            <div class="var">$xhtml/css coder</div><i class="comma">,</i>
-            <div class="var">$frontend developer</div>
+            <div class="command">
+              @include
+            </div>&nbsp;
+            <div class="property">
+              position
+            </div><i class="comma">(</i>
+            <div class="var">
+              $content-manager
+            </div><i class="comma">,</i>
+            <div class="var">
+              $designer
+            </div><i class="comma">,</i>
+            <div class="var">
+              $xhtml/css coder
+            </div><i class="comma">,</i>
+            <div class="var">
+              $frontend developer
+            </div>
             <i class="comma">)</i>
-            <i class="semicolon">;</i></div>
+            <i class="semicolon">;</i>
+          </div>
         </div>
         <i class="brace">}</i>
       </div>
@@ -227,14 +343,21 @@ defineProps({
         #education <i class="brace">{</i>
       </div>
       <div class="declaration">
-        <div class="property">college<i class="colon">:</i></div>
-        <div class="property-value">komitent<i class="semicolon">;</i></div>
+        <div class="property">
+          college<i class="colon">:</i>
+        </div>
+        <div class="property-value">
+          komitent<i class="semicolon">;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">specialty<i class="colon">:</i></div>
+        <div class="property">
+          specialty<i class="colon">:</i>
+        </div>
         <div class="property-value">
           software development and automated systems
-          <i class="semicolon">;</i></div>
+          <i class="semicolon">;</i>
+        </div>
       </div>
       <i class="brace">}</i>
     </div>
@@ -244,26 +367,41 @@ defineProps({
         #contacts <i class="brace">{</i>
       </div>
       <div class="declaration">
-        <div class="property">name<i class="colon">:</i></div>
-        <div class="property-value">'Vladimir Glushkov'<i class="semicolon">;</i></div>
+        <div class="property">
+          name<i class="colon">:</i>
+        </div>
+        <div class="property-value">
+          'Vladimir Glushkov'<i class="semicolon">;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">age<i class="colon">:</i></div>
+        <div class="property">
+          age<i class="colon">:</i>
+        </div>
         <div class="property-value">
           {{ age }} years
-          <i class="semicolon">;</i></div>
+          <i class="semicolon">;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">phone-number<i class="colon">:</i></div>
+        <div class="property">
+          phone-number<i class="colon">:</i>
+        </div>
         <div class="property-value">
-          <div class="num">8.906.863.50.88</div>
-          <i class="semicolon">;</i></div>
+          <div class="num">
+            8.906.863.50.88
+          </div>
+          <i class="semicolon">;</i>
+        </div>
       </div>
       <div class="declaration">
-        <div class="property">email<i class="colon">:</i></div>
+        <div class="property">
+          email<i class="colon">:</i>
+        </div>
         <div class="property-value">
           <a href="mailto:xhtmlblog@mail.com" target="_blank">xhtmlblog@mail.com</a><i class="comma">,</i>
-          <a href="mailto:fenrirheimr@mail.com" target="_blank">fenrirheimr@mail.com</a><i class="semicolon">;</i></div>
+          <a href="mailto:fenrirheimr@mail.com" target="_blank">fenrirheimr@mail.com</a><i class="semicolon">;</i>
+        </div>
       </div>
       <i class="brace">}</i>
     </div>

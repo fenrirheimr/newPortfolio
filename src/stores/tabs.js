@@ -1,9 +1,10 @@
-import { defineStore } from "pinia";
-import { shallowRef } from "vue";
+import { defineStore } from 'pinia'
+import { shallowRef } from 'vue'
 
-import Scss from "@/partials/Scss.vue";
-import Js from "@/partials/Js.vue";
-import ClassicCv from "@/partials/ClassicCv.vue";
+import Scss from '@/partials/Scss.vue'
+import Js from '@/partials/Js.vue'
+import ClassicCv from '@/partials/ClassicCv.vue'
+
 export const tabsStore = defineStore('products', {
   state: () => {
     return {
@@ -12,28 +13,28 @@ export const tabsStore = defineStore('products', {
           name: 'Classic CV',
           isActive: true,
           component: shallowRef(ClassicCv),
-          theme: 'light'
+          theme: 'light',
         },
         {
           name: 'SCSS',
           isActive: false,
           component: shallowRef(Scss),
-          theme: 'dark'
+          theme: 'dark',
         },
         {
           name: 'JS',
           isActive: false,
           component: shallowRef(Js),
-          theme: 'dark'
-        }
-      ]
+          theme: 'dark',
+        },
+      ],
     }
   },
   actions: {
-    openModal(payload) {
-    },
-    closeModal() {
-    },
+    // openModal(payload) {
+    // },
+    // closeModal() {
+    // },
   },
   getters: {},
-});
+})

@@ -1,61 +1,53 @@
 <script setup>
-import { ref } from "vue";
 import { tabsStore } from '@/stores/tabs'
 
-let currentTab = ref()
-
-const selectTab = (selectedTab) => {
-  tabsStore().tabs.find(tab => {
-    tab.isActive = false
-    selectedTab.isActive = true
-    currentTab = selectedTab
-  })
+function selectTab(selectedTab) {
+  tabsStore().tabs.find(tab => tab.isActive = false)
+  selectedTab.isActive = true
 }
-console.log('???', tabsStore().tabs)
-const getAge = date => {
-  const now = new Date(),
-      birthDate = new Date(date),
-      diff = now.getTime() - birthDate.getTime(),
-      y = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)),
-      m = Math.floor(
-          (diff % (1000 * 60 * 60 * 24 * 365.25)) /
-          (1000 * 60 * 60 * 24 * (365.25 / 12))
-      ),
-      d = Math.floor(
-          (diff % (1000 * 60 * 60 * 24 * (365.24 / 12))) / (1000 * 60 * 60 * 24)
-      )
+
+function getAge(date) {
+  const now = new Date()
+  const birthDate = new Date(date)
+  const diff = now.getTime() - birthDate.getTime()
+  const y = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
+  const m = Math.floor(
+    (diff % (1000 * 60 * 60 * 24 * 365.25))
+    / (1000 * 60 * 60 * 24 * (365.25 / 12)),
+  )
+  const d = Math.floor(
+    (diff % (1000 * 60 * 60 * 24 * (365.24 / 12))) / (1000 * 60 * 60 * 24),
+  )
   return { y, m, d }
 }
-
 </script>
 
 <template>
-
   <div class="tabs-wrapper">
     <div class="tabs">
-      <div class="tab"
-           v-for="(tab, i) in tabsStore().tabs"
-           :key="i"
-           :class="{ 'is-active': tab.isActive }"
-           @click="selectTab(tab)">
+      <div
+        v-for="(tab, i) in tabsStore().tabs"
+        :key="i"
+        class="tab"
+        :class="{ 'is-active': tab.isActive }"
+        @click="selectTab(tab)"
+      >
         {{ tab.name }}
       </div>
     </div>
-    <div class="tab-content" >
+    <div class="tab-content">
       <component
-          :class="tab.theme"
-          v-for="(tab, i) in tabsStore().tabs"
-          :is="tab.isActive ? tab.component : null"
-          :key="i"
-          :age="getAge('02.11.1984').y"
+        :is="tab.isActive ? tab.component : null"
+        v-for="(tab, i) in tabsStore().tabs"
+        :key="i"
+        :class="tab.theme"
+        :age="getAge('02.11.1984').y"
       />
     </div>
   </div>
-
 </template>
 
 <style scoped lang="scss">
-
 .tabs-wrapper {
   height: 100%;
   overflow: hidden;
@@ -111,5 +103,4 @@ const getAge = date => {
     }
   }
 }
-
 </style>

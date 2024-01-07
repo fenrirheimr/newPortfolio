@@ -1,47 +1,47 @@
 <script setup>
-import { ref, defineEmits, watch } from "vue";
+import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
-import debounce from "lodash/debounce";
+import debounce from 'lodash/debounce'
 import { modalStore } from '@/stores/modalStore.js'
 import Close from '@/components/icons/Close.vue'
 import Link from '@/components/icons/Link.vue'
-import Tag from "@/components/Tag.vue";
+import Tag from '@/components/Tag.vue'
 
 defineProps({
   show: Boolean,
 })
 
 const emit = defineEmits(['close'])
-const modal = ref(null);
+const modal = ref(null)
 const { content } = storeToRefs(modalStore())
 
 const removed = debounce(() => {
   emit('close')
 }, 1000)
 
-const closeModal = () => {
-  modal.value.classList.add('removing');
+function closeModal() {
+  modal.value.classList.add('removing')
   removed()
 }
 //
-function getFileTypeFromURL(url) {
-  const extension = url && url.split(/[#?]/)[0].split('.').pop().trim();
-  if(extension === 'mp4'){
-    return `
-    <video autobuffer="autobuffer" width="100%" autoplay="autoplay" loop="loop" playsinline="" muted="" preload="auto">
-        <source src="${url}" type="video/mp4">
-      </video>
-    `;
-  } else {
-    return `<img alt="" src="${url}" style="max-width: 100%;" />`;
-  }
-}
-
+// function getFileTypeFromURL(url) {
+//   const extension = url && url.split(/[#?]/)[0].split('.').pop().trim()
+//   if (extension === 'mp4') {
+//     return `
+//     <video autobuffer="autobuffer" width="100%" autoplay="autoplay" loop="loop" playsinline="" muted="" preload="auto">
+//         <source src="${url}" type="video/mp4">
+//       </video>
+//     `
+//   }
+//   else {
+//     return `<img alt="" src="${url}" style="max-width: 100%;" />`
+//   }
+// }
 </script>
 
 <template>
   <Teleport to="body">
-    <div class="modal-mask" v-if="show" ref="modal">
+    <div v-if="show" ref="modal" class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="close-modal">
@@ -52,22 +52,22 @@ function getFileTypeFromURL(url) {
             <div class="project-header">
               <h1>{{ content.title }}</h1>
               <div class="project-tags">
-                <Tag v-for="tag in content.stack" :title="tag" :icon="{}" />
+                <Tag v-for="(tag, i) in content.stack" :key="i" :title="tag" :icon="{}" />
               </div>
             </div>
             <div class="project-description">
               {{ content.descriptionShort }}
             </div>
-            <div class="project-description" v-if="content.descriptionExtended">
+            <div v-if="content.descriptionExtended" class="project-description">
               {{ content.descriptionExtended }}
             </div>
-            <div class="project-images" v-if="content.projectImages.length">
-              <div class="img-wrapper" v-for="(src, i) in content.projectImages" :key="i">
-                <img :src="src" />
+            <div v-if="content.projectImages.length" class="project-images">
+              <div v-for="(src, i) in content.projectImages" :key="i" class="img-wrapper">
+                <img :src="src">
               </div>
             </div>
-            <div class="project-images" v-else>
-              <div class="img-wrapper no-image" v-for="(n, i) in 3" :key="i">
+            <div v-else class="project-images">
+              <div v-for="(n, i) in 3" :key="i" class="img-wrapper no-image">
                 no images
               </div>
             </div>
@@ -75,9 +75,9 @@ function getFileTypeFromURL(url) {
               {{ content.myResponsibility }}
             </div>
 
-            <div class="project-extensions" v-if="content.projectLinks">
+            <div v-if="content.projectLinks" class="project-extensions">
               <span class="label">Проект:</span>
-              <a v-for="link in content.projectLinks" :href="link.url" target="_blank">{{ link.title }} <Link class="icon" /></a>
+              <a v-for="(link, i) in content.projectLinks" :key="i" :href="link.url" target="_blank">{{ link.title }} <Link class="icon" /></a>
             </div>
 
             <div class="project-customer">
@@ -89,7 +89,6 @@ function getFileTypeFromURL(url) {
               <span v-else>{{ content.projectCustomer.title }}</span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -251,8 +250,6 @@ function getFileTypeFromURL(url) {
   @include flex(row, center, center);
 }
 
-
-
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
@@ -266,7 +263,6 @@ function getFileTypeFromURL(url) {
   display: block;
   margin-top: 1rem;
 }
-
 
 .sb-enter-active {}
 .sb-leave-active {
@@ -353,5 +349,4 @@ function getFileTypeFromURL(url) {
     opacity: 0;
   }
 }
-
 </style>
