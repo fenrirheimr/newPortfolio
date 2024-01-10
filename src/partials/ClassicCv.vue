@@ -26,7 +26,7 @@ onMounted(() => {
 const techName = [
   'Javascript',
   'Vue',
-  'React',
+  'React Native',
   'Vuetify',
   // 'Adobe Photoshop',
   'Git',
@@ -55,6 +55,18 @@ function handleNav() {
     path: '/portfolio',
   })
 }
+function handleDownload() {
+  const filePath = '/VladimirGlushkov-frontend-developer.pdf'
+  const link = document.createElement('a')
+  link.href = filePath
+  link.download = filePath.substring(filePath.lastIndexOf('/') + 1)
+  link.click()
+}
+
+function handleHH() {
+  const url = 'https://kopeysk.hh.ru/resume/f3f47071ff016f67f00039ed1f434f44666d53'
+  window.open(url, '_blank').focus()
+}
 
 const backup = true
 </script>
@@ -71,6 +83,20 @@ const backup = true
           size="medium"
           @click="handleNav"
         />
+
+        <AnimatedButton
+          class="button"
+          title="Скачать резюме"
+          size="medium"
+          @click="handleDownload"
+        />
+
+        <AnimatedButton
+          class="button"
+          title="На hh.ru"
+          size="medium"
+          @click="handleHH"
+        />
       </div>
       <div class="name-wrapper">
         <h1>Владимир Глушков</h1>
@@ -86,7 +112,8 @@ const backup = true
             <strong>Для связи:</strong>
             <a href="https://t.me/fenrirheimr" target="_blank">@fenrirheimr</a>,
             <a href="tel:+79068635088" target="_blank">8 (906) 863-50-88</a>,
-            <a href="mailto:xhtmlblog@mail.com" target="_blank">xhtmlblog@mail.com</a>
+            <a href="mailto:xhtmlblog@gmail.com" target="_blank">xhtmlblog@gmail.com</a>,
+            <a href="mailto:fenrirheimr@gmail.com" target="_blank">fenrirheimr@gmail.com</a>
           </div>
           <div class="item">
             <details ref="skills" class="skills" open>
@@ -194,7 +221,7 @@ const backup = true
     .photo-wrapper {
       @include flex(column, flex-start, center);
       max-width: 384px;
-      gap: 1vw;
+      gap: 2vw;
       .photo {
         width: 20vw;
         height: 20vw;

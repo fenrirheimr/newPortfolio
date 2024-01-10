@@ -4,8 +4,6 @@ import Loader from '@/components/Loader.vue'
 import Portfolio from '@/partials/Portfolio.vue'
 
 const route = useRoute()
-
-// console.log('>>>>', route.meta)
 </script>
 
 <template>

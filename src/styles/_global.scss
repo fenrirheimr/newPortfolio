@@ -13,7 +13,7 @@ body {
   @include scrollable(#352E2E, transparent);
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
   a {
     color: #352E2E;
     text-decoration: none;

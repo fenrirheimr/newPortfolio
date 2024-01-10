@@ -1,4 +1,6 @@
 <script setup>
+import { declOfNum } from '@/utils/declOfNum'
+
 const props = defineProps({
   data: Array,
 })
@@ -38,12 +40,19 @@ function itemsOnMonth(items) {
       moveArrayItems(temp, 0, temp[0].month - 1)
       // temp.move(0, temp[0].month - 1)
   }
-  // console.log('???', temp)
   return temp
 }
 function handleClick(id) {
   const element = document.getElementById(id)
   element.scrollIntoView({ block: 'start', behavior: 'smooth' })
+}
+
+function getMonthName(monthNumber) {
+  const date = new Date()
+  date.setMonth(monthNumber - 1)
+  const months = 'январе, феврале, марте, апреле, мае, июне, июле, августе, сентябре, октябре, ноябре, декабре'.split(',')
+  // return date.toLocaleString('ru', { month: 'long' });
+  return months[date.getMonth()]
 }
 </script>
 
@@ -63,6 +72,9 @@ function handleClick(id) {
           @click="handleClick(cont.id)"
         >
           {{ cont.items.length > 0 ? cont.items.length : null }}
+          <div v-if="cont.items.length > 0" class="tooltip">
+            {{ declOfNum(cont.items.length, ['работа', 'работы', 'работ'], true) }} в {{ getMonthName(cont.month) }} {{ item.year }} года
+          </div>
         </div>
       </div>
     </div>
@@ -93,8 +105,38 @@ function handleClick(id) {
       outline-offset: -1px;
       border-radius: 2px;
       padding: 2px 3px;
+      position: relative;
+      .tooltip {
+        @include font-style($font-size: calc(7.21vw * 10 / 100), $font-weight: 400, $line-height: 120%, $color: rgba(255, 255, 255, .8));
+        display: none;
+        width: max-content;
+        padding: 5px 7px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 130%;
+        left: 50%;
+        background: rgba(0, 0, 0, .8);
+        transform: translateX(-50%);
+        z-index: 10;
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
       &:hover {
         cursor: pointer;
+        .tooltip {
+          display: block;
+        }
       }
       &[data-level="0"] {
         cursor: default;

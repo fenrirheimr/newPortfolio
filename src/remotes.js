@@ -6,8 +6,9 @@ const endpoint = {
 
 export function withAuthorization(token, config = {}) {
   return {
+    ...config,
     headers: {
-      ...config,
+      ...config.headers,
       'x-apikey': token,
     },
   }

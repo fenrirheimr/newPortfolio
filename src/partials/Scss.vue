@@ -399,8 +399,8 @@ defineProps({
           email<i class="colon">:</i>
         </div>
         <div class="property-value">
-          <a href="mailto:xhtmlblog@mail.com" target="_blank">xhtmlblog@mail.com</a><i class="comma">,</i>
-          <a href="mailto:fenrirheimr@mail.com" target="_blank">fenrirheimr@mail.com</a><i class="semicolon">;</i>
+          <a href="mailto:xhtmlblog@gmail.com" target="_blank">xhtmlblog@gmail.com</a><i class="comma">,</i>
+          <a href="mailto:fenrirheimr@gmail.com" target="_blank">fenrirheimr@gmail.com</a><i class="semicolon">;</i>
         </div>
       </div>
       <i class="brace">}</i>

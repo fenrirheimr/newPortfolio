@@ -30,11 +30,6 @@ export const tabsStore = defineStore('products', {
       ],
     }
   },
-  actions: {
-    // openModal(payload) {
-    // },
-    // closeModal() {
-    // },
-  },
+  actions: {},
   getters: {},
 })

@@ -10,7 +10,7 @@ const route = useRoute()
 
 <template>
   <section>
-    <Hello title="Frontend developer" />
+    <Hello title="Владимир Глушков" />
     <Teleport to="body">
       <Loader :spinner="route.meta.spinner" :duration="route.meta.duration" />
     </Teleport>
@@ -20,6 +20,6 @@ const route = useRoute()
 <style scoped lang="scss">
 section {
   @include flex(column, center, center);
-  height: 100%;
+  min-height: 100vh;
 }
 </style>

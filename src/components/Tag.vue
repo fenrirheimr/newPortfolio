@@ -3,9 +3,6 @@ const props = defineProps({
   title: String,
   icon: Object,
 })
-
-// const content = data
-// console.log('props', props)
 </script>
 
 <template>

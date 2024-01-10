@@ -208,8 +208,8 @@ defineProps({
                 </div>
                 <div class="array">
                   <i class="symbol ml0">[</i>
-                  <a href="mailto:xhtmlblog@mail.com" target="_blank">'xhtmlblog@mail.com'</a><i class="symbol">,</i>
-                  <a href="mailto:fenrirheimr@mail.com" target="_blank">'fenrirheimr@mail.com'</a>
+                  <a href="mailto:xhtmlblog@gmail.com" target="_blank">'xhtmlblog@gmail.com'</a><i class="symbol">,</i>
+                  <a href="mailto:fenrirheimr@gmail.com" target="_blank">'fenrirheimr@gmail.com'</a>
                   <i class="symbol mr0">]</i>
                 </div>
                 <i class="symbol ml0">,</i>

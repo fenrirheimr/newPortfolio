@@ -6,6 +6,7 @@ import NavBar from '@/components/NavBar.vue'
 const loc = useRoute()
 const router = useRouter()
 const currentRouter = ref(null)
+const main = ref(null)
 
 watch(
   loc,
@@ -17,7 +18,7 @@ watch(
 </script>
 
 <template>
-  <main :class="{ main: loc.fullPath === '/' }">
+  <main ref="main" :class="{ main: loc.fullPath === '/' }">
     <NavBar :title="currentRouter[0]?.meta?.title" :path="currentRouter[0]?.path" />
     <RouterView :key="loc.fullPath" />
   </main>
@@ -32,7 +33,7 @@ main {
   min-height: 100%;
   &.main {
     overflow: hidden;
-    height: 100%;
+    min-height: 100%;
   }
 }
 </style>

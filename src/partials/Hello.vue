@@ -30,7 +30,7 @@ onMounted(() => {
 
   <AnimatedButton
     ref="animatedButton"
-    title="Смотреть"
+    title="Резюме"
     class="button"
     size="large" @click="showModal = !showModal"
   />
@@ -40,19 +40,27 @@ onMounted(() => {
 
 <style scoped lang="scss">
 h1 {
-  @include font-style($font-size: calc(100vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
+  @include font-style($font-size: calc(90vw * 10 / 100), $font-weight: 500, $line-height: 120%, $color: #352E2E);
   opacity: 0;
   position: relative;
   &.loaded {
     animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
+  &:before,
   &:after {
     @include font-style($font-size: 20%, $font-weight: 500, $line-height: 120%, $color: #352E2E);
     @include absolute();
-    content: 'Resume';
-    right: 0;
-    top: 100%;
     text-shadow: none;
+  }
+  &:before {
+    content: 'меня зовут';
+    left: 12px;
+    top: 0;
+  }
+  &:after {
+    content: 'я - frontend developer';
+    right: 12px;
+    top: 100%;
   }
 }
 
@@ -63,50 +71,6 @@ h1 {
     animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 }
-
-//.btn-6 {
-//
-//
-//  text-decoration: none;
-//  line-height: $btn-height;
-//  transition: 0.5s ease-in-out;
-//  overflow: hidden;
-//  width: 100%;
-//  max-width: 20vw;
-//  position: relative;
-//  text-align: center;
-//
-//  opacity: 0;
-//  border-radius: 3px;
-//
-//
-//  & > * {
-//    transition: 0.5s ease-in-out;
-//  }
-//
-//  span {
-//    @include absolute();
-//    display: block;
-//    @include size(0);
-//    border-radius: 50%;
-//    background-color: $btn-color-dark;
-//    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-//    transform: translate(-50%, -50%);
-//    z-index: -1;
-//  }
-//
-//  &:hover {
-//    color: tint($btn-color, 55%);
-//    cursor: pointer;
-//    span {
-//      @include size(225%, $btn-width*2.25);
-//    }
-//  }
-//
-//  &:active {
-//    background-color: $btn-color;
-//  }
-//}
 
 @keyframes text-pop-up-top {
   0% {
